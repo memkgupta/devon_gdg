@@ -4,6 +4,7 @@ import {
   InstagramIcon,
   LinkedinIcon,
   TwitterIcon,
+  LinkIcon,
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { SocialIcon } from "./SocialIcon";
@@ -132,10 +133,19 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-12 left-0 right-0 z-30 flex justify-center gap-6 text-white">
-        <SocialIcon href="https://github.com" icon={<GithubIcon />} />
-        <SocialIcon href="https://linkedin.com" icon={<LinkedinIcon />} />
+        <SocialIcon
+          href="https://gdg.community.dev/gdg-on-campus-gl-bajaj-institute-of-technology-and-management-greater-noida-india/"
+          icon={<LinkIcon />}
+        />
+        <SocialIcon
+          href="https://www.linkedin.com/company/dscglbajaj/posts/?feedView=all"
+          icon={<LinkedinIcon />}
+        />
         <SocialIcon href="https://twitter.com" icon={<TwitterIcon />} />
-        <SocialIcon href="https://instagram.com" icon={<InstagramIcon />} />
+        <SocialIcon
+          href="https://www.instagram.com/gdg_glbajaj/"
+          icon={<InstagramIcon />}
+        />
       </div>
     </div>
   );
