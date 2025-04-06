@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black z-30" /> */}
 
       {/* Footer Content */}
-      <nav className="w-full flex justify-between bg-white items-center p-4 h-full z-40 relative">
+      <nav className="w-full flex justify-between bg-black items-center p-4 h-full z-40 relative">
         <div className="flex items-center space-x-4">
           <Image
             src="/glb-logo.png"
@@ -27,10 +27,10 @@ export default function Footer() {
             height={200}
           />
           <div className="text-lg">
-            <div className="font-semibold text-black">
+            <div className="font-semibold text-white">
               G.L. Bajaj Institute of Technology & Management
             </div>
-            <div className="text-black text-xs">
+            <div className="text-white text-xs">
               Knowledge Park III, Greater Noida, Uttar Pradesh
             </div>
           </div>
