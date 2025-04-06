@@ -1,18 +1,21 @@
 import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import { Prizes } from "@/components/Prizes";
 import Timeline from "@/components/Timeline";
 import Tracks from "@/components/Tracks";
 import Image from "next/image";
-
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
-    <div className="bg-black">
-    <Navbar/>
-    <Hero/>
-    <Tracks/>
-    <Timeline/>
-    <About/>
+    <div className="bg-black flex flex-col gap-10">
+      <Navbar />
+      <Hero />
+      <About />
+      <Tracks />
+      <Timeline />
+      <Prizes />
+      <Footer />
     </div>
   );
 }
