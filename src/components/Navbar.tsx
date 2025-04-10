@@ -51,10 +51,10 @@ const Navbar = () => {
               Prizes
             </a>
             <a
-              href="#sponsors"
+              href="#collaborate"
               className="nav-link text-rose-600 hover:text-rose-700 transition-colors"
             >
-              Sponsors
+              Collaborate
             </a>
             <a
               href="#faq"
