@@ -14,9 +14,9 @@ const About = () => {
           {/* Left: Image or Graphic */}
           <div className="relative">
             <img
-              src="/gdg.png"
+              src="/devon-logo.png"
               alt="About DEVON Hackathon"
-              className="w-[70%] h-auto object-cover rounded-2xl shadow-lg"
+              className="w-[90%] h-auto object-cover rounded-2xl shadow-lg"
             />
             {/* Optional: Glow or glitch effect */}
             <div className="absolute inset-0 bg-red-500 opacity-10 rounded-2xl blur-3xl z-[-1]" />
@@ -48,6 +48,9 @@ const About = () => {
               </span>
               <span className="bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium">
                 In-Person
+              </span>
+              <span className="bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium">
+                Multiple Rounds
               </span>
             </div>
           </div>
