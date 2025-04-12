@@ -5,7 +5,7 @@ import { HeartHandshake, HandCoins, ExternalLink, Scale } from "lucide-react";
 const Collaborate = () => {
   const hackathonTracks = [
     {
-      name: "Be a Community Partner",
+      name: "Community Partner",
       icon: "HeartHandshake",
       link: "https://docs.google.com/forms/d/1EXWp07n5lzpK4aphBr2MAT2FL-0JRFGxixRVPsI1ibM/edit",
       desc: "Empower the next wave of innovation! Collaborate with us and grow your tech tribe.",
@@ -44,16 +44,16 @@ const Collaborate = () => {
         this hackathon a massive success. Interested in being part of Devon 2.0?
         Let's collaborate!
       </p>
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-5 justify-items-center">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-5 justify-items-center">
         {hackathonTracks.map((track) => {
           const Icon = iconsMap[track.icon as keyof typeof iconsMap];
           return (
-            <CardSpotlight key={track.name} className="w-96">
+            <CardSpotlight key={track.name} className="">
               <div className="flex flex-col items-center gap-2 justify-center">
                 <Icon className="z-10" />
                 <a
                   href={track.link}
-                  className="text-xl font-bold relative z-20 mt-2 flex items-center gap-1 hover:text-rose-600"
+                  className="text-xl font-bold relative z-20 mt-2 flex text-center items-center gap-1 hover:text-rose-600"
                 >
                   {track.name}
                   <ExternalLink size="15px" />

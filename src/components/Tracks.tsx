@@ -51,7 +51,7 @@ const Tracks = () => {
         Choose from our carefully curated tracks designed to inspire innovation
         and creativity in different domains of technology and problem-solving.
       </p>
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-5 justify-items-center">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-5 gap-y-5 justify-items-center">
         {hackathonTracks.map((track) => {
           return (
             <TracksCard
