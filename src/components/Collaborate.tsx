@@ -5,23 +5,23 @@ import { HeartHandshake, HandCoins, ExternalLink, Scale } from "lucide-react";
 const Collaborate = () => {
   const hackathonTracks = [
     {
-      name: "Community Partner Form",
+      name: "Be a Community Partner",
       icon: "HeartHandshake",
       link: "https://docs.google.com/forms/d/1EXWp07n5lzpK4aphBr2MAT2FL-0JRFGxixRVPsI1ibM/edit",
-      desc: "Become our Community Partner!",
+      desc: "Empower the next wave of innovation! Collaborate with us and grow your tech tribe.",
     },
     {
-      name: "Become a Judge",
+      name: "Be a Judge",
       icon: "Scale",
       link: "https://docs.google.com/forms/d/1cfR5io9Ki0UMtmvbSSB_112KGUY0qYVhRu9VmXy19Fg/edit",
-      desc: "You can apply for judge position!",
+      desc: "Shape the future—one pitch at a time. Share your expertise and inspire bright minds.",
     },
 
     {
-      name: "Sponsor Form",
+      name: "Be a Sponsor",
       icon: "HandCoins",
       link: "https://docs.google.com/forms/d/1qgpYR7iw5lbvWCxR4mAy_SxXK7BfmQ_IgeDCijJsu9o/edit",
-      desc: "You can sponsor the hackathon!",
+      desc: "Showcase your brand to top talent and changemakers. Fuel the hackathon with your support!",
     },
   ];
 
