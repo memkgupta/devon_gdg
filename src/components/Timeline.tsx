@@ -81,13 +81,13 @@ const Timeline = () => {
   return (
     <section
       id="schedule"
-      className="relative bg-black text-white py-16 px-4 sm:px-8 timeline-bg"
+      className="relative   px-4 sm:px-6 md:px-12 lg:px-24 pt-12 pb-8 sm:pb-12 md:pb-16 -mt-1"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center blur-lg"
+        className="absolute inset-0 bg-cover bg-top md:bg-center blur-sm "
         style={{ backgroundImage: "url('/timeline-back.png')" }}
       />
-      <h2 className="relative z-10 text-7xl text-rose-700 font-audiowide glitch text-center mb-12 tracking-widest neon-text">
+      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-audiowide text-rose-700 glitch">
         Timeline
       </h2>
 
