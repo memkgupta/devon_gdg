@@ -6,23 +6,25 @@ import { Spotlight } from "./ui/spotlight-new";
 
 const About = () => {
   return (
-    <div className="relative px-4 sm:px-6 md:px-12 lg:px-24 pt-12 pb-8 sm:pb-12 md:pb-16 " id="about">
-    
+    <div
+      className="relative px-4 sm:px-6 md:px-12 lg:px-24 pt-12 pb-8 sm:pb-12 md:pb-16 "
+      id="about"
+    >
       <div
         className="absolute bg-top inset-0 bg-cover md:bg-center blur-sm"
         style={{ backgroundImage: "url('/timeline-back.png')" }}
       />
       <div className="relative   z-10">
-      <h1 className="text-center glitch text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-audiowide text-rose-700 mb-6 sm:mb-8 md:mb-10">
-        About
-      </h1>
+        <h1 className="text-center glitch text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-audiowide text-rose-700 mb-6 sm:mb-8 md:mb-10">
+          About
+        </h1>
         <div className="z-0 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           {/* Image container - stacks on mobile, side by side on larger screens */}
-          <div className="relative mx-auto md:mx-0 w-full max-w-md order-2 md:order-1 mt-6 md:mt-0">
+          <div className="relative mx-auto md:mx-0 w-full max-w-md order-2 md:order-1 mt-6 md:mt-0 bg-blend-color-burn">
             <img
-              src="/devon-logo.png"
+              src="/logodevon2.0-2.png"
               alt="About DEVON Hackathon"
-              className="w-full h-auto object-cover rounded-2xl shadow-lg"
+              className="w-full h-auto object-cover rounded-3xl shadow-lg"
             />
             {/* Glow effect */}
             <div className="absolute inset-0 bg-red-500 opacity-10 rounded-2xl blur-3xl z-[-1]" />
@@ -62,7 +64,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
