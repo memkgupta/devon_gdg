@@ -18,7 +18,7 @@ export default function Home() {
       <Tracks />
       <Timeline />
       <Prizes />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <Collaborate />
       <FAQ />
       <Footer />

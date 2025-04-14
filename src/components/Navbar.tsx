@@ -100,13 +100,13 @@ const Navbar = () => {
             >
               Prizes
             </a>
-            <a
+            {/* <a
               href="#sponsors"
               className="nav-link text-rose-600 hover:text-rose-700 transition-colors"
               onClick={handleNavLinkClick}
             >
               Sponsors
-            </a>
+            </a> */}
             <a
               href="#collaborate"
               className="nav-link text-rose-600 hover:text-rose-700 transition-colors"
@@ -180,13 +180,13 @@ const Navbar = () => {
             >
               Prizes
             </a>
-            <a
+            {/* <a
               href="#sponsors"
               className="mobile-nav-link block text-rose-600 hover:text-rose-700 transition-colors py-2"
               onClick={handleNavLinkClick}
             >
               Sponsors
-            </a>
+            </a> */}
             <a
               href="#collaborate"
               className="mobile-nav-link block text-rose-600 hover:text-rose-700 transition-colors py-2"
