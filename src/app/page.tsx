@@ -7,6 +7,7 @@ import Tracks from "@/components/Tracks";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Collaborate from "@/components/Collaborate";
+import FAQ from "@/components/FAQ";
 export default function Home() {
   return (
     <div className="bg-black flex flex-col gap-10">
@@ -17,6 +18,7 @@ export default function Home() {
       <Timeline />
       <Prizes />
       <Collaborate />
+      <FAQ/>
       <Footer />
     </div>
   );

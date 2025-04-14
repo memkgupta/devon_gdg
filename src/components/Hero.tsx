@@ -75,7 +75,7 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4 ">
-        <p className="text-9xl md:text-8xl font-bold mb-6 animate-pulse">
+        <p className="text-6xl lg:text-9xl md:text-8xl font-bold mb-6 animate-pulse">
           <span className="text-transparent glitch bg-clip-text bg-gradient-to-r from-rose-300 to-pink-900">
             DEVON 2.0
           </span>
