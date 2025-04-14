@@ -1,30 +1,31 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Calendar, Code, Rocket, Trophy } from "lucide-react";
+import { useInView } from "react-intersection-observer";
 
 const timeline = [
   {
     title: "Registration Opens",
     icon: <Calendar className="w-6 h-6 text-pink-500" />,
-    date: "April 10, 2025",
+    date: "April 26, 2025",
     desc: "Start forming your team and register early to reserve your slot!",
   },
   {
     title: "Coding Round",
     icon: <Code className="w-6 h-6 text-cyan-400" />,
-    date: "April 20, 2025",
+    date: "To be declared",
     desc: "Coding kicks off. Solve real-world challenges over 36 hours.",
   },
   {
     title: "Idea Submission",
     icon: <Rocket className="w-6 h-6 text-purple-500" />,
-    date: "April 22, 2025",
+    date: "To be declared",
     desc: "Deploy, demo, and submit your projects before the deadline.",
   },
   {
     title: "Final Presentation",
     icon: <Trophy className="w-6 h-6 text-yellow-400" />,
-    date: "April 25, 2025",
+    date: "To be declared",
     desc: "Showcase your work to the judges and stand out!",
   },
 ];
@@ -78,13 +79,36 @@ const subtimeline = [
 ];
 
 const Timeline = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [showSubtimeline, setShowSubtimeline] = useState(false);
+
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) {
+      setShowSubtimeline(inView);
+    }
+  }, [inView, isMobile]);
+
   return (
     <section
       id="schedule"
-      className="relative   px-4 sm:px-6 md:px-12 lg:px-24 pt-12 pb-8 sm:pb-12 md:pb-16 -mt-1"
+      className="relative px-4 sm:px-6 md:px-12 lg:px-24 pt-12 pb-8 sm:pb-12 md:pb-16 -mt-1"
     >
       <div
-        className="absolute inset-0 bg-cover bg-top md:bg-center blur-sm "
+        className="absolute inset-0 bg-cover bg-top md:bg-center blur-sm"
         style={{ backgroundImage: "url('/timeline-back.png')" }}
       />
       <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-audiowide text-rose-700 glitch">
@@ -97,7 +121,8 @@ const Timeline = () => {
           return (
             <div
               key={idx}
-              className={`group relative transition-all duration-300 cursor-pointer`}
+              ref={isPresentation ? ref : null}
+              className="group relative transition-all duration-300 cursor-pointer"
             >
               <div className="min-w-[300px] bg-white/5 hover:bg-white/20 transition-all ease-in-out backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6">
                 <div className="text-pink-400 mb-2">{item.icon}</div>
@@ -108,9 +133,16 @@ const Timeline = () => {
                 <p className="text-gray-300 mt-3">{item.desc}</p>
               </div>
 
-              {/* Subtimeline shown only on hover over Final Presentation */}
               {isPresentation && (
-                <div className="max-h-0 overflow-hidden group-hover:max-h-[1200px] transition-all duration-700 ease-in-out">
+                <div
+                  className={`overflow-hidden transition-all duration-700 ease-in-out ${
+                    isMobile
+                      ? showSubtimeline
+                        ? "max-h-[1200px]"
+                        : "max-h-0"
+                      : "group-hover:max-h-[1200px] max-h-0"
+                  }`}
+                >
                   <div className="mt-4 ml-4 pl-4 border-l-2 border-pink-500 space-y-4">
                     {subtimeline.map((sub, i) => (
                       <div
@@ -130,7 +162,6 @@ const Timeline = () => {
             </div>
           );
         })}
-        {/* Left timeline vertical bar */}
         <div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-pink-500/40 to-transparent animate-pulse blur-sm"></div>
       </div>
     </section>

@@ -33,7 +33,7 @@ const iconsMap = {
 export function TracksCard({ icon, name, description }: any) {
   const Icon = iconsMap[icon as keyof typeof iconsMap];
   return (
-    <CardSpotlight className="w-96">
+    <CardSpotlight className="w-96 cursor-pointer">
       <div className="flex flex-col items-start justify-center">
         <Icon className="z-20" />
         <p className="text-xl font-bold relative z-20 mt-2">{name}</p>

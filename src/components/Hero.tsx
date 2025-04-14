@@ -3,7 +3,6 @@ import {
   GithubIcon,
   InstagramIcon,
   LinkedinIcon,
-  TwitterIcon,
   LinkIcon,
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
@@ -141,7 +140,6 @@ const Hero = () => {
           href="https://www.linkedin.com/company/dscglbajaj/posts/?feedView=all"
           icon={<LinkedinIcon />}
         />
-        <SocialIcon href="https://twitter.com" icon={<TwitterIcon />} />
         <SocialIcon
           href="https://www.instagram.com/gdg_glbajaj/"
           icon={<InstagramIcon />}
