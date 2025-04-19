@@ -24,14 +24,14 @@ const Collaborate = () => {
     },
   ];
 
-  const collaborators = [
-    {
-      name: "Hack2skill",
-      link: "https://hack2skill.com/",
-      logo: "/h2s.png",
-      desc: "An industry-leading technology platform dedicated to innovation management and Product evangelism.",
-    },
-  ];
+  // const collaborators = [
+  //   {
+  //     name: "Hack2skill",
+  //     link: "https://hack2skill.com/",
+  //     logo: "/h2s.png",
+  //     desc: "An industry-leading technology platform dedicated to innovation management and Product evangelism.",
+  //   },
+  // ];
 
   const iconsMap = {
     HeartHandshake,
@@ -46,13 +46,13 @@ const Collaborate = () => {
     >
       <div className="max-w-screen-xl mx-auto">
         <p className="text-center text-[clamp(2rem,7vw,5rem)] font-audiowide text-rose-700 glitch">
-          Our Collaborators
+          Collaborate with us
         </p>
-        <p className="font-orbitron mt-5 text-base sm:text-lg tracking-wide text-rose-400 text-center max-w-3xl mx-auto px-4 sm:px-8">
+        {/* <p className="font-orbitron mt-5 text-base sm:text-lg tracking-wide text-rose-400 text-center max-w-3xl mx-auto px-4 sm:px-8">
           Partners and communities joining us to empower innovation and fuel
           bold ideas.
-        </p>
-        <div
+        </p> */}
+        {/* <div
           className={`mt-6 sm:mt-8 md:mt-12 grid grid-cols-1 sm:grid-cols-2 ${
             collaborators.length === 1 || collaborators.length === 2
               ? `lg:grid-cols-${collaborators.length}`
@@ -89,7 +89,7 @@ const Collaborate = () => {
               </CardSpotlight>
             );
           })}
-        </div>
+        </div> */}
 
         <p className="font-orbitron mt-12 text-base sm:text-lg tracking-wide text-rose-400 text-center max-w-3xl mx-auto px-4 sm:px-8">
           We are looking for sponsors, judges, and community partners to help

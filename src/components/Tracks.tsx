@@ -12,19 +12,27 @@ const Tracks = () => {
         "Leverage machine learning and AI to solve real-world problems.",
     },
     {
-      name: "Blockchain",
-      icon: "ShieldCheck",
-      description: "Explore decentralized apps and smart contracts.",
+      name: "Web3.0",
+      icon: "Wallet",
+      description:
+        "Build decentralized apps and services using Web3 technologies.",
     },
     {
-      name: "Health Tech",
+      name: "Healthcare",
       icon: "HeartPulse",
       description: "Innovate for better healthcare and medical accessibility.",
     },
     {
-      name: "EdTech",
-      icon: "BookOpenCheck",
-      description: "Revolutionize education with creative learning solutions.",
+      name: "IoT",
+      icon: "Router",
+      description:
+        "Connect devices, collect data, and automate systems with IoT solutions.",
+    },
+    {
+      name: "Women Safety",
+      icon: "ShieldCheck",
+      description:
+        "Build tech-driven tools ensuring safety and empowerment for women worldwide.!",
     },
     {
       name: "Open Innovation",
@@ -32,7 +40,7 @@ const Tracks = () => {
       description: "Think outside the box – build anything impactful!",
     },
   ];
-  
+
   return (
     <div
       id="tracks"
@@ -55,7 +63,7 @@ const Tracks = () => {
         Choose from our carefully curated tracks designed to inspire innovation
         and creativity in different domains of technology and problem-solving.
       </p>
-      
+
       <div className="mt-6 sm:mt-8 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5 text-justify justify-items-center">
         {hackathonTracks.map((track) => {
           return (

@@ -13,6 +13,9 @@ import {
   BookOpenCheck,
   Sparkles,
   HeartHandshake,
+  Wallet,
+  Router,
+  Bitcoin,
 } from "lucide-react";
 
 const iconsMap = {
@@ -29,6 +32,9 @@ const iconsMap = {
   BookOpenCheck,
   Sparkles,
   HeartHandshake,
+  Wallet,
+  Router,
+  Bitcoin,
 };
 export function TracksCard({ icon, name, description }: any) {
   const Icon = iconsMap[icon as keyof typeof iconsMap];
