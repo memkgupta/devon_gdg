@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Calendar, Code, Rocket, Trophy } from "lucide-react";
-import { useInView } from "react-intersection-observer";
+
 
 const timeline = [
   {
@@ -98,7 +98,7 @@ const Timeline = () => {
           return (
             <div
               key={idx}
-              ref={isPresentation ? ref : null}
+             
               className="group relative transition-all duration-300 cursor-pointer"
             >
               <div onClick={()=>{
