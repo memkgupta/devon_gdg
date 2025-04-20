@@ -14,7 +14,7 @@ import {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   // Close mobile menu after clicking a link
   const handleNavLinkClick = () => {
     setIsMenuOpen(false);
@@ -24,34 +24,37 @@ const Navbar = () => {
   useEffect(() => {
     // Select all links with hash (#)
     const internalLinks = document.querySelectorAll('a[href^="#"]');
-    
-    const scrollToSection = (e:any) => {
+
+    const scrollToSection = (e: any) => {
       e.preventDefault();
-      const targetId = e.currentTarget.getAttribute('href');
+      const targetId = e.currentTarget.getAttribute("href");
       if (targetId === "#") return; // Skip if href is just "#"
-      
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         // Account for fixed navbar height
         const navbarHeight = 64; // 16 * 4 = 64px (h-16)
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-        
+        const targetPosition =
+          targetElement.getBoundingClientRect().top +
+          window.pageYOffset -
+          navbarHeight;
+
         window.scrollTo({
           top: targetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     };
 
     // Add click event to each link
-    internalLinks.forEach(link => {
-      link.addEventListener('click', scrollToSection);
+    internalLinks.forEach((link) => {
+      link.addEventListener("click", scrollToSection);
     });
 
     // Cleanup event listeners
     return () => {
-      internalLinks.forEach(link => {
-        link.removeEventListener('click', scrollToSection);
+      internalLinks.forEach((link) => {
+        link.removeEventListener("click", scrollToSection);
       });
     };
   }, []);
@@ -97,6 +100,13 @@ const Navbar = () => {
             >
               Prizes
             </a>
+            {/* <a
+              href="#sponsors"
+              className="nav-link text-rose-600 hover:text-rose-700 transition-colors"
+              onClick={handleNavLinkClick}
+            >
+              Sponsors
+            </a> */}
             <a
               href="#collaborate"
               className="nav-link text-rose-600 hover:text-rose-700 transition-colors"
@@ -116,7 +126,7 @@ const Navbar = () => {
           {/* Register Button */}
           <div className="hidden md:block">
             <button className="px-4 py-2 bg-rose-500/20 border border-rose-500 text-rose-400 rounded hover:bg-rose-500/30 transition-all">
-              Register
+              Registration Starting Soon
             </button>
           </div>
 
@@ -138,7 +148,7 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         <div
           className={`md:hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           } overflow-hidden`}
         >
           <div className="py-4 space-y-4">
@@ -170,6 +180,13 @@ const Navbar = () => {
             >
               Prizes
             </a>
+            {/* <a
+              href="#sponsors"
+              className="mobile-nav-link block text-rose-600 hover:text-rose-700 transition-colors py-2"
+              onClick={handleNavLinkClick}
+            >
+              Sponsors
+            </a> */}
             <a
               href="#collaborate"
               className="mobile-nav-link block text-rose-600 hover:text-rose-700 transition-colors py-2"
@@ -185,7 +202,7 @@ const Navbar = () => {
               FAQ
             </a>
             <button className="w-full px-4 py-2 bg-rose-500/20 border border-rose-500 text-rose-400 rounded hover:bg-rose-500/30 transition-all">
-              Register
+              Registration Starting Soon
             </button>
           </div>
         </div>

@@ -1,9 +1,9 @@
 import React from "react";
 import { CardSpotlight } from "./ui/card-spotlight";
 import { HeartHandshake, HandCoins, ExternalLink, Scale } from "lucide-react";
-
+import Image from "next/image";
 const Collaborate = () => {
-  const hackathonTracks = [
+  const collabLinks = [
     {
       name: "Community Partner",
       icon: "HeartHandshake",
@@ -24,6 +24,15 @@ const Collaborate = () => {
     },
   ];
 
+  // const collaborators = [
+  //   {
+  //     name: "Hack2skill",
+  //     link: "https://hack2skill.com/",
+  //     logo: "/h2s.png",
+  //     desc: "An industry-leading technology platform dedicated to innovation management and Product evangelism.",
+  //   },
+  // ];
+
   const iconsMap = {
     HeartHandshake,
     HandCoins,
@@ -37,34 +46,75 @@ const Collaborate = () => {
     >
       <div className="max-w-screen-xl mx-auto">
         <p className="text-center text-[clamp(2rem,7vw,5rem)] font-audiowide text-rose-700 glitch">
-          Collaborate
+          Collaborate with us
         </p>
-
-        <p className="font-orbitron mt-5 text-base sm:text-lg tracking-wide text-rose-400 text-center max-w-3xl mx-auto px-4 sm:px-8">
-          We are looking for sponsors, judges, and community partners to help make
-          this hackathon a massive success. Interested in being part of Devon 2.0?
-          Let's collaborate!
-        </p>
-
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
-          {hackathonTracks.map((track) => {
-            const Icon = iconsMap[track.icon as keyof typeof iconsMap];
+        {/* <p className="font-orbitron mt-5 text-base sm:text-lg tracking-wide text-rose-400 text-center max-w-3xl mx-auto px-4 sm:px-8">
+          Partners and communities joining us to empower innovation and fuel
+          bold ideas.
+        </p> */}
+        {/* <div
+          className={`mt-6 sm:mt-8 md:mt-12 grid grid-cols-1 sm:grid-cols-2 ${
+            collaborators.length === 1 || collaborators.length === 2
+              ? `lg:grid-cols-${collaborators.length}`
+              : "lg:grid-cols-3"
+          } gap-3 sm:gap-4 lg:gap-5 text-justify justify-items-center`}
+        >
+          {collaborators.map((collab) => {
             return (
-              <CardSpotlight key={track.name} className="w-full max-w-xs">
+              <CardSpotlight
+                key={collab.name}
+                className="w-full h-[300px] max-w-xs flex flex-col justify-center items-center"
+              >
                 <div className="flex flex-col items-center gap-2 justify-center text-center">
-                  <Icon className="z-10 w-8 h-8 sm:w-10 sm:h-10 text-neutral-300" />
+                  <Image
+                    src={collab.logo}
+                    alt="Hack2skill Logo"
+                    width={200}
+                    height={200}
+                    className="object-contain z-20"
+                  />
                   <a
-                    href={track.link}
-                    className="text-lg sm:text-xl font-bold relative z-20 mt-2 flex items-center gap-1 text-rose-400 hover:text-rose-600"
+                    href={collab.link}
+                    className="text-lg sm:text-xl font-bold relative z-20 mt-2 flex items-center gap-1 hover:text-rose-600"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {track.name}
+                    {collab.name}
                     <ExternalLink size="15px" />
                   </a>
                 </div>
                 <p className="text-neutral-300 mt-4 relative z-20 text-sm sm:text-base text-center">
-                  {track.desc}
+                  {collab.desc}
+                </p>
+              </CardSpotlight>
+            );
+          })}
+        </div> */}
+
+        <p className="font-orbitron mt-12 text-base sm:text-lg tracking-wide text-rose-400 text-center max-w-3xl mx-auto px-4 sm:px-8">
+          We are looking for sponsors, judges, and community partners to help
+          make this hackathon a massive success. Interested in being part of
+          Devon 2.0? Let's collaborate!
+        </p>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          {collabLinks.map((collabLink) => {
+            const Icon = iconsMap[collabLink.icon as keyof typeof iconsMap];
+            return (
+              <CardSpotlight key={collabLink.name} className="w-full max-w-xs">
+                <div className="flex flex-col items-center gap-2 justify-center text-center">
+                  <Icon className="z-10 w-8 h-8 sm:w-10 sm:h-10 text-neutral-300" />
+                  <a
+                    href={track.link}
+                    className="text-lg sm:text-xl font-bold relative z-20 mt-2 flex items-center gap-1 hover:text-rose-600"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {collabLink.name}
+                    <ExternalLink size="15px" />
+                  </a>
+                </div>
+                <p className="text-neutral-300 mt-4 relative z-20 text-sm sm:text-base text-center">
+                  {collabLink.desc}
                 </p>
               </CardSpotlight>
             );

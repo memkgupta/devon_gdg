@@ -8,6 +8,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import Collaborate from "@/components/Collaborate";
 import FAQ from "@/components/FAQ";
+import Sponsors from "@/components/Sponsors";
 export default function Home() {
   return (
     <div className="bg-black flex flex-col gap-10">
@@ -17,8 +18,9 @@ export default function Home() {
       <Tracks />
       <Timeline />
       <Prizes />
+      {/* <Sponsors /> */}
       <Collaborate />
-      <FAQ/>
+      <FAQ />
       <Footer />
     </div>
   );

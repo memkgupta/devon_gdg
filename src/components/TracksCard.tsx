@@ -13,6 +13,9 @@ import {
   BookOpenCheck,
   Sparkles,
   HeartHandshake,
+  Wallet,
+  Router,
+  Bitcoin,
 } from "lucide-react";
 
 const iconsMap = {
@@ -29,11 +32,14 @@ const iconsMap = {
   BookOpenCheck,
   Sparkles,
   HeartHandshake,
+  Wallet,
+  Router,
+  Bitcoin,
 };
 export function TracksCard({ icon, name, description }: any) {
   const Icon = iconsMap[icon as keyof typeof iconsMap];
   return (
-    <CardSpotlight className="w-96">
+    <CardSpotlight className="w-96 cursor-pointer">
       <div className="flex flex-col items-start justify-center">
         <Icon className="z-20 text-neutral-300" />
         <p className="text-xl font-bold relative z-20 mt-2 text-rose-400">{name}</p>
