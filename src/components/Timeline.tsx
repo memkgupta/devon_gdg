@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Calendar, Code, Rocket, Trophy } from "lucide-react";
 
 const timeline = [
@@ -78,6 +78,7 @@ const subtimeline = [
 ];
 
 const Timeline = () => {
+  const isPresentationOpen = useState(false);
   return (
     <section
       id="schedule"
@@ -99,7 +100,11 @@ const Timeline = () => {
               key={idx}
               className={`group relative transition-all duration-300 cursor-pointer`}
             >
-              <div className="min-w-[300px] bg-white/5 hover:bg-white/20 transition-all ease-in-out backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6">
+              <div onClick={()=>{
+                if(isPresentation){
+                  
+                }
+              }} className="min-w-[300px] bg-white/5 hover:bg-white/20 transition-all ease-in-out backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6">
                 <div className="text-pink-400 mb-2">{item.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-1 glitch">
                   {item.title}
@@ -109,7 +114,7 @@ const Timeline = () => {
               </div>
 
               {/* Subtimeline shown only on hover over Final Presentation */}
-              {isPresentation && (
+              {isPresentation &&isPresentationOpen && (
                 <div className="max-h-0 overflow-hidden group-hover:max-h-[1200px] transition-all duration-700 ease-in-out">
                   <div className="mt-4 ml-4 pl-4 border-l-2 border-pink-500 space-y-4">
                     {subtimeline.map((sub, i) => (

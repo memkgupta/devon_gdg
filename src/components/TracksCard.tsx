@@ -35,8 +35,8 @@ export function TracksCard({ icon, name, description }: any) {
   return (
     <CardSpotlight className="w-96">
       <div className="flex flex-col items-start justify-center">
-        <Icon className="z-20" />
-        <p className="text-xl font-bold relative z-20 mt-2">{name}</p>
+        <Icon className="z-20 text-neutral-300" />
+        <p className="text-xl font-bold relative z-20 mt-2 text-rose-400">{name}</p>
 
         <p className="text-neutral-300 mt-2 relative z-20 text-sm">
           {description}

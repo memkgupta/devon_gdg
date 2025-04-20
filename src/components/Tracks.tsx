@@ -51,7 +51,7 @@ const Tracks = () => {
         Tracks
       </h2>
 
-      <p className="font-orbitron mt-3 md:mt-5 text-sm sm:text-base md:text-lg tracking-wide text-rose-400 text-center max-w-3xl mx-auto px-2 sm:px-4 md:px-8">
+      <p className="relative font-orbitron mt-3 md:mt-5 text-sm sm:text-base md:text-lg tracking-wide text-rose-300  text-center max-w-3xl mx-auto px-2 sm:px-4 md:px-8">
         Choose from our carefully curated tracks designed to inspire innovation
         and creativity in different domains of technology and problem-solving.
       </p>

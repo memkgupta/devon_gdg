@@ -30,7 +30,7 @@ const About = () => {
 
           {/* Text Content - appears first on mobile, second on desktop */}
           <div className="order-1 md:order-2">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 md:mb-6 font-cyber">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 md:mb-6 font-cyber text-rose-300">
               About DEVON 2.0
             </h2>
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed">

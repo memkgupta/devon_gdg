@@ -52,10 +52,10 @@ const Collaborate = () => {
             return (
               <CardSpotlight key={track.name} className="w-full max-w-xs">
                 <div className="flex flex-col items-center gap-2 justify-center text-center">
-                  <Icon className="z-10 w-8 h-8 sm:w-10 sm:h-10" />
+                  <Icon className="z-10 w-8 h-8 sm:w-10 sm:h-10 text-neutral-300" />
                   <a
                     href={track.link}
-                    className="text-lg sm:text-xl font-bold relative z-20 mt-2 flex items-center gap-1 hover:text-rose-600"
+                    className="text-lg sm:text-xl font-bold relative z-20 mt-2 flex items-center gap-1 text-rose-400 hover:text-rose-600"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
